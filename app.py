@@ -677,24 +677,38 @@ def get_stats():
 def load_data():
     paths = ["dataset/Tourist_Destinations.csv","Tourist_Destinations.csv","data/Tourist_Destinations.csv"]
     df = None
+    loaded_from = None
+    
+    # Try local paths first
     for p in paths:
         if os.path.exists(p):
             try:
                 df = pd.read_csv(p)
+                loaded_from = f"local: {p}"
                 break
-            except Exception:
-                pass
-    # if dataset folder contains some CSV, pick the first loadable one
+            except Exception as e:
+                continue
+    
+    # if dataset folder contains CSV files, pick the largest one
     if df is None and os.path.isdir("dataset"):
-        for fname in os.listdir("dataset"):
-            if fname.lower().endswith(".csv"):
+        csv_files = [(f, os.path.getsize(os.path.join("dataset", f))) 
+                     for f in os.listdir("dataset") if f.lower().endswith(".csv")]
+        if csv_files:
+            csv_files.sort(key=lambda x: x[1], reverse=True)  # Sort by size, largest first
+            for fname, _ in csv_files:
                 try:
-                    df = pd.read_csv(os.path.join("dataset", fname))
+                    full_path = os.path.join("dataset", fname)
+                    df = pd.read_csv(full_path)
+                    loaded_from = f"local: {full_path}"
                     break
-                except Exception:
+                except Exception as e:
                     continue
+    
+    # Fall back to sample data if no CSV found
     if df is None:
         df = _sample_data()
+        loaded_from = "sample_data (limited to 30 rows)"
+    
     df.columns = df.columns.str.strip().str.lower().str.replace(' ','_')
     renames = {'destination_name':'site_name','destination':'site_name','avg_cost_(usd/day)':'budget_per_day',
                'avg_cost_usd/day':'budget_per_day','avg_rating':'rating','type':'site_type'}
@@ -705,7 +719,9 @@ def load_data():
     df['budget_per_day'] = pd.to_numeric(df['budget_per_day'],errors='coerce').fillna(100)
     df['reviews_count']  = np.random.randint(50,800,len(df))
     df['popularity']     = (df['rating'] / 5) * 0.6 + np.random.uniform(0,0.4,len(df))
-    return df.dropna(subset=['country','site_name']).reset_index(drop=True)
+    
+    result_df = df.dropna(subset=['country','site_name']).reset_index(drop=True)
+    return result_df
 
 def _sample_data():
     rows = [
