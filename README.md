@@ -258,7 +258,7 @@ The dashboard displays real-time statistics such as:
 These metrics help create transparency and demonstrate active community participation.
 
 
-# 8. How the System Works
+## 8. How the System Works
 
 The system operates through a simple workflow.
 
@@ -321,7 +321,7 @@ The modular architecture allows future features to be added without major struct
 
 
 
-# 10. Future Scope
+## 10. Future Scope
 
 While the current version provides a strong foundation, several improvements can further enhance the platform.
 
@@ -354,7 +354,7 @@ A hybrid system combining AI with behavioral data could provide more accurate re
 An admin panel could provide insights into user engagement and system performance.
 
 
-# 11. Project Reflection
+## 11. Project Reflection
 
 This project demonstrates the practical application of AI technologies in solving real-world problems. Developing GlobeTrek AI provided valuable experience in designing user-centered systems, integrating AI APIs, managing data persistence, and handling system reliability.
 
@@ -363,7 +363,7 @@ One of the most important lessons was designing fallback mechanisms to ensure th
 The project also highlights how lightweight development frameworks can still deliver powerful and scalable applications when combined with modern AI capabilities.
 
 
-# 12. Conclusion
+## 12. Conclusion
 
 GlobeTrek AI successfully addresses the challenges associated with traditional travel planning by providing a unified platform that combines discovery, personalization, and organization.
 
