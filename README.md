@@ -6,9 +6,9 @@
 The application is publicly accessible at:
 [https://capestone-2-by-pravar-and-jwal-globetreck.streamlit.app/](https://capestone-2-by-pravar-and-jwal-globetreck.streamlit.app/)
 
----
 
-# 1. Introduction
+
+## 1. Introduction
 
 Travel planning is an exciting but often complex process. While the internet provides a vast amount of information about destinations, travelers frequently struggle to organize this information into a coherent and personalized plan. Cultural travelers, in particular, seek deeper experiences such as local traditions, heritage sites, food culture, and community interactions. However, most existing travel tools focus primarily on commercial tourism, leaving a gap for platforms that prioritize cultural exploration and personalized planning.
 
@@ -18,9 +18,8 @@ Built using Streamlit for the user interface, SQLite for data management, and th
 
 The goal of this project is to create a user-centric digital assistant that helps travelers transform scattered research into a structured and meaningful travel plan.
 
----
 
-# 2. Problem Statement
+## 2. Problem Statement
 
 Planning a culturally meaningful trip is often fragmented and time-consuming. Travelers must typically rely on multiple platforms and sources to gather the information required for decision-making.
 
@@ -48,9 +47,8 @@ Without consolidated information and community feedback, travelers may feel unce
 
 These problems highlight the need for a unified system that integrates discovery, personalization, and organization in one platform.
 
----
 
-# 3. Proposed Solution
+## 3. Proposed Solution
 
 GlobeTrek AI addresses these issues by providing a unified cultural travel planning platform. The system integrates multiple travel planning components into a single application.
 
@@ -67,9 +65,8 @@ Instead of using multiple tools, users can manage their entire travel planning w
 
 Additionally, the platform incorporates community-driven features such as reviews and feedback to enhance trust and provide social proof for travel decisions.
 
----
 
-# 4. Project Objectives
+## 4. Project Objectives
 
 The main objectives of GlobeTrek AI are:
 
@@ -97,9 +94,8 @@ Allow users to store, manage, and revisit their travel plans, favorites, and not
 
 Showcase how modern AI APIs can be used to enhance real-world applications.
 
----
 
-# 5. System Overview
+## 5. System Overview
 
 GlobeTrek AI is a web-based application that provides a comprehensive environment for travel planning.
 
@@ -117,9 +113,8 @@ These modules include:
 
 The application uses Streamlit to deliver an interactive and responsive user interface while SQLite ensures lightweight and reliable data persistence.
 
----
 
-# 6. Technology Stack
+## 6. Technology Stack
 
 The platform is built using a lightweight yet powerful technology stack.
 
@@ -143,19 +138,17 @@ Google's Gemini AI model is used for generating travel itineraries and providing
 
 The application integrates the Gemini API using an API key stored securely in the Streamlit secrets configuration.
 
----
 
-# 7. Application Features
+## 7. Application Features
 
 GlobeTrek AI offers several features that support a complete travel planning experience.
 
-## 7.1 User Authentication System
+### 7.1 User Authentication System
 
 The platform includes a secure login and registration system. Users can create personal accounts and access their saved travel data across sessions.
 
----
 
-## 7.2 AI Itinerary Generator
+### 7.2 AI Itinerary Generator
 
 The AI itinerary generator is one of the core features of the platform.
 
@@ -171,9 +164,8 @@ The system converts this information into a structured prompt and sends it to th
 
 Users can save generated itineraries to their personal travel history.
 
----
 
-## 7.3 AI Travel Chatbot
+### 7.3 AI Travel Chatbot
 
 The integrated chatbot allows users to ask follow-up questions related to travel planning.
 
@@ -186,9 +178,8 @@ Examples include:
 
 This feature provides an interactive planning experience and allows users to refine their plans dynamically.
 
----
 
-## 7.4 Destination Explorer
+### 7.4 Destination Explorer
 
 The destination explorer allows users to browse and discover travel locations.
 
@@ -200,17 +191,15 @@ Destinations can be filtered based on:
 
 This feature helps users identify potential travel locations and explore cultural highlights.
 
----
 
-## 7.5 Favorites Management
+### 7.5 Favorites Management
 
 Users can save destinations or itineraries as favorites for quick access later.
 
 This helps travelers maintain a shortlist of potential travel plans while comparing options.
 
----
 
-## 7.6 Reviews and Ratings
+### 7.6 Reviews and Ratings
 
 Community reviews provide valuable social insights about destinations and travel experiences.
 
@@ -222,17 +211,15 @@ Users can:
 
 This enhances the credibility and usefulness of the platform.
 
----
 
-## 7.7 Feedback System
+### 7.7 Feedback System
 
 The feedback module allows users to share suggestions, report issues, and contribute ideas for improving the platform.
 
 This encourages continuous improvement and community engagement.
 
----
 
-## 7.8 Travel Notes / Journal
+### 7.8 Travel Notes / Journal
 
 The travel notes feature allows users to store personal notes related to their travel planning.
 
@@ -243,9 +230,8 @@ These notes can include:
 * Important reminders
 * Trip reflections
 
----
 
-## 7.9 User Profile and Travel History
+### 7.9 User Profile and Travel History
 
 Each user has a dedicated profile section where they can view:
 
@@ -257,9 +243,8 @@ Each user has a dedicated profile section where they can view:
 
 This provides a structured record of their travel planning journey.
 
----
 
-## 7.10 Real-Time Platform Statistics
+### 7.10 Real-Time Platform Statistics
 
 The dashboard displays real-time statistics such as:
 
@@ -271,7 +256,6 @@ The dashboard displays real-time statistics such as:
 
 These metrics help create transparency and demonstrate active community participation.
 
----
 
 # 8. How the System Works
 
@@ -305,7 +289,6 @@ Users can save the generated itinerary or continue interacting with the chatbot 
 
 All user data is stored in the SQLite database and can be accessed later through the user profile.
 
----
 
 # 9. Strengths of the Application
 
@@ -335,7 +318,7 @@ The use of Streamlit and SQLite makes the application easy to deploy and maintai
 
 The modular architecture allows future features to be added without major structural changes.
 
----
+
 
 # 10. Future Scope
 
@@ -369,7 +352,6 @@ A hybrid system combining AI with behavioral data could provide more accurate re
 
 An admin panel could provide insights into user engagement and system performance.
 
----
 
 # 11. Project Reflection
 
@@ -379,7 +361,6 @@ One of the most important lessons was designing fallback mechanisms to ensure th
 
 The project also highlights how lightweight development frameworks can still deliver powerful and scalable applications when combined with modern AI capabilities.
 
----
 
 # 12. Conclusion
 
@@ -388,5 +369,7 @@ GlobeTrek AI successfully addresses the challenges associated with traditional t
 Through AI-powered itinerary generation, community-driven insights, and persistent trip management tools, the platform enables travelers to move from scattered research to structured and meaningful travel plans.
 
 By integrating modern artificial intelligence with an accessible web interface, GlobeTrek AI demonstrates how technology can enhance cultural travel experiences and simplify complex planning workflows.
+
+
 
 
