@@ -1,5 +1,7 @@
 # 🌍 GlobeTrek AI — Cultural Travel Planner
 
+Made by Pravar Golecha & Jwal Patel 
+
 
 ## Live Application
 
